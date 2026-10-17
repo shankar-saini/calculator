@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Web App | HTML, CSS and JavaScript Project</title>
+    <meta name="description" content="A responsive calculator with add, subtract, multiply, divide, percent and keyboard support, built with plain HTML, CSS and JavaScript by Shankar Saini.">
+    <meta name="author" content="Shankar Saini">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#14213d">
+    <link rel="canonical" href="https://shankar-saini.github.io/calculator/">
+    <link rel="alternate" hreflang="en-in" href="https://shankar-saini.github.io/calculator/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Shankar Saini | Projects">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:url" content="https://shankar-saini.github.io/calculator/">
+    <meta property="og:title" content="Calculator Web App | HTML, CSS and JavaScript Project">
+    <meta property="og:description" content="A responsive calculator with add, subtract, multiply, divide, percent and keyboard support, built with plain HTML, CSS and JavaScript by Shankar Saini.">
+    <meta property="og:image" content="https://shankar-saini.github.io/shankar-saini-seo-web-developer.png">
+    <meta property="og:image:alt" content="Shankar Saini, SEO specialist and web developer from Jaipur">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Calculator Web App | HTML, CSS and JavaScript Project">
+    <meta name="twitter:description" content="A responsive calculator with add, subtract, multiply, divide, percent and keyboard support, built with plain HTML, CSS and JavaScript by Shankar Saini.">
+    <meta name="twitter:image" content="https://shankar-saini.github.io/shankar-saini-seo-web-developer.png">
+
+    <link rel="stylesheet" href="calculator.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {"@type": "WebApplication", "@id": "https://shankar-saini.github.io/calculator/#app", "name": "Calculator", "url": "https://shankar-saini.github.io/calculator/",
+          "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any (runs in the browser)",
+          "description": "A responsive calculator with add, subtract, multiply, divide, percent and keyboard support, built with plain HTML, CSS and JavaScript by Shankar Saini.", "inLanguage": "en-IN",
+          "author": {"@id": "https://shankar-saini.github.io/#person"},
+          "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}},
+        {"@type": "BreadcrumbList", "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://shankar-saini.github.io/"},
+          {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://shankar-saini.github.io/projects"},
+          {"@type": "ListItem", "position": 3, "name": "Calculator", "item": "https://shankar-saini.github.io/calculator/"}]},
+        {"@type": "Person", "@id": "https://shankar-saini.github.io/#person", "name": "Shankar Saini", "url": "https://shankar-saini.github.io/"}
+      ]
+    }
+    </script>
+</head>
+
+<body>
+    <main class="page">
+
+        <h1>Simple Calculator</h1>
+        <p class="intro">Click the buttons or use your keyboard: numbers, <kbd>+</kbd> <kbd>-</kbd> <kbd>*</kbd> <kbd>/</kbd> <kbd>%</kbd>, <kbd>Enter</kbd> for equals, <kbd>Backspace</kbd> to delete and <kbd>Esc</kbd> to clear.</p>
+
+        <section class="calc" aria-label="Calculator">
+            <div class="screen" role="status" aria-live="polite">
+                <div class="history" id="history" aria-label="Previous calculation"></div>
+                <div class="display" id="display" aria-label="Current number">0</div>
+            </div>
+
+            <div class="keys">
+                <button class="key fn" data-action="clear" aria-label="Clear all">AC</button>
+                <button class="key fn" data-action="delete" aria-label="Delete last digit">&#9003;</button>
+                <button class="key fn" data-action="percent" aria-label="Percent">%</button>
+                <button class="key op" data-op="/" aria-label="Divide">&divide;</button>
+
+                <button class="key" data-num="7">7</button>
+                <button class="key" data-num="8">8</button>
+                <button class="key" data-num="9">9</button>
+                <button class="key op" data-op="*" aria-label="Multiply">&times;</button>
+
+                <button class="key" data-num="4">4</button>
+                <button class="key" data-num="5">5</button>
+                <button class="key" data-num="6">6</button>
+                <button class="key op" data-op="-" aria-label="Subtract">&minus;</button>
+
+                <button class="key" data-num="1">1</button>
+                <button class="key" data-num="2">2</button>
+                <button class="key" data-num="3">3</button>
+                <button class="key op" data-op="+" aria-label="Add">+</button>
+
+                <button class="key" data-action="sign" aria-label="Change sign">+/&minus;</button>
+                <button class="key" data-num="0">0</button>
+                <button class="key" data-action="dot" aria-label="Decimal point">.</button>
+                <button class="key eq" data-action="equals" aria-label="Equals">=</button>
+            </div>
+        </section>
+
+        <p class="note">Built with plain JavaScript, with no <code>eval()</code> and no libraries.</p>
+
+        <!-- More projects -->
+        <section class="more" aria-labelledby="more-title">
+            <h2 id="more-title">More Projects by Shankar Saini</h2>
+            <p>
+                This is a mini practice website made by
+                <a href="https://shankar-saini.github.io/" rel="author">Shankar Saini</a>.
+                Have a look at my other HTML, CSS and JavaScript projects too:
+            </p>
+            <p class="more-links">
+                <a href="https://shankar-saini.github.io/login-page/">Login page</a>
+                <a href="https://shankar-saini.github.io/travel-time/">Travel Time website</a>
+                <a href="https://shankar-saini.github.io/restaurant-website/">Restaurant website</a>
+                <a href="https://shankar-saini.github.io/projects">See all my projects</a>
+                <a href="https://github.com/shankar-saini/calculator" rel="noopener">View the code on GitHub</a>
+            </p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Shankar Saini · Practice project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
