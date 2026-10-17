@@ -138,22 +138,7 @@ kbd {
     opacity: 0.75;
 }
 
-/* ---------- More projects + footer ---------- */
-.more {
-    margin-top: 36px;
-}
-
-.more h2 {
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-.more-links a {
-    display: inline-block;
-    margin: 6px 10px;
-    font-weight: bold;
-}
-
+/* ---------- Footer ---------- */
 .footer {
     text-align: center;
     font-size: 14px;
