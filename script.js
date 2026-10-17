@@ -155,6 +155,7 @@ document.querySelector(".keys").addEventListener("click", function (event) {
 
 // ---------- keyboard ----------
 document.addEventListener("keydown", function (event) {
+    if (document.querySelector("dialog[open]")) { return; }   // the "more projects" pop-up is open
     var k = event.key;
     if (event.ctrlKey || event.metaKey || event.altKey) { return; }
 
